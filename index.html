@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<!-- 写真が切り替わる設定 -->
+<style type="text/css" src="https://code.jquery.com/jquery-1.12.4.min.js">
+#photo {
+    width: 300px;
+    height: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+#photo img {
+    padding 10px;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+</style>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+$(function(){
+    var setImg = '#photo';
+    var fadeSpeed = 1700;
+    var switchDelay = 14000;
+
+    $(setImg).children('img').css({opacity:'0'});
+    $(setImg + ' img:first').stop().animate({opacity:'1',zIndex:'20'},fadeSpeed);
+
+    setInterval(function(){
+        $(setImg + ' :first-child').animate({opacity:'0'},fadeSpeed).next('img').animate({opacity:'1'},fadeSpeed).end().appendTo(setImg);
+    },switchDelay);
+});
+</script>
+
+  <head>
+    <!-- 共通: 基本設定-->
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./common/style.css" type="text/css">
+    <link rel="icon" href="./common/icon/icon.png">
+    
+    <!-- 共通: フォントの設定-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    
+    <!-- 共通: lightbox (ウェブサイト上で画像や動画を拡大表示するためのポップアップウィンドウ) の設定-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
+    
+    <!-- iPhoneデバイスの設定-->
+    <link rel="manifest" href="./manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="./common/icon/icon-180x180.png">
+    
+    <!-- Androidデバイスのアイコン設定 挙動未確認
+    <meta name="theme-color" content="#ffffff">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Web App">
+    <link rel="icon" sizes="192x192" href="./common/icon/icon.png">
+    -->
+    
+    <title>i-r-i-i-r</title>
+  </head>
+  <body>
+    <!-- 共通: ヘッダ -->
+    <div id="header"></div>
+    <script>$(function(){$('#header').load('./common/header.html');});</script>
+    
+    <div class="wrapper">
+        <div class="main">
+            <nav class="for-sp"><!--ページリストを画面中央に表示 (スマホ用)-->
+                <ul class="ul-center">
+                    <li id="menu-item-001"><a href="./app_dev.html"><div class="main-buttom">App development</div></a></li>
+                    <li id="menu-item-002"><a href="./3dmodeling.html"><div class="main-buttom">3d manufacturing</div></a></li>
+                    <li id="menu-item-003"><a href="./photos.html"><div class="main-buttom">Photos</div></a></li>
+                    <li id="menu-item-004"><a href="./profile.html"><div class="main-buttom">Profile</div></a></li>
+                    <li id="menu-item-005"><a href="https://github.com/i-r-i-i-r" target="_blank"><div class="main-buttom">GitHub</div></a></li>
+                    <li id="menu-item-006"><a href="https://www.youtube.com/@iritani_drums" onclick="window.open(this.href,'_system');return false;"><div class="main-buttom">Drums</div></a></li>
+                </ul>
+            </nav>
+            <br><br><br><br>
+            <div id="photo">
+                <img src="./pictures/gallery/001.JPG" width="300" alt="">
+                <img src="./pictures/gallery/002.JPG" width="300" alt="">
+                <img src="./pictures/gallery/003.JPG" width="300" alt="">
+                <img src="./pictures/gallery/004.JPG" width="300" alt="">
+            </div>
+        </div>
+        
+        <!-- 共通: ハンバーガーメニュー -->
+        <div id="hamburger-menu"></div>
+        <script>$(function(){$('#hamburger-menu').load('./common/hamburger-menu.html');});</script>
+        
+        <!-- 共通: フッタ -->
+        <div id="footer"></div>
+        <script>$(function(){$('#footer').load('./common/footer.html');});</script>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  </body>
+</html>
