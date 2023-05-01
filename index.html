@@ -39,8 +39,8 @@ $(function(){
     <meta charset="utf-8">
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./common/style.css" type="text/css">
-    <link rel="icon" href="./common/icon/icon.png">
+    <link rel="stylesheet" href="../common/style.css" type="text/css">
+    <link rel="icon" href="../common/icon/icon.png">
     
     <!-- 共通: フォントの設定-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -70,18 +70,18 @@ $(function(){
   <body>
     <!-- 共通: ヘッダ -->
     <div id="header"></div>
-    <script>$(function(){$('#header').load('./common/header.html');});</script>
+    <script>$(function(){$('#header').load('../common/header.html');});</script>
     
     <div class="wrapper">
         <div class="main">
             <nav class="for-sp"><!--ページリストを画面中央に表示 (スマホ用)-->
                 <ul class="ul-center">
-                    <li id="menu-item-001"><a href="./app_dev.html"><div class="main-buttom">App development</div></a></li>
-                    <li id="menu-item-002"><a href="./3dmodeling.html"><div class="main-buttom">3d manufacturing</div></a></li>
-                    <li id="menu-item-003"><a href="./photos.html"><div class="main-buttom">Photos</div></a></li>
-                    <li id="menu-item-004"><a href="./profile.html"><div class="main-buttom">Profile</div></a></li>
-                    <li id="menu-item-005"><a href="https://github.com/i-r-i-i-r" target="_blank"><div class="main-buttom">GitHub</div></a></li>
-                    <li id="menu-item-006"><a href="https://www.youtube.com/@iritani_drums" onclick="window.open(this.href,'_system');return false;"><div class="main-buttom">Drums</div></a></li>
+                    <li><a href="../app_dev.html"><div class="main-buttom">App development</div></a></li>
+                    <li><a href="../3dmodeling.html"><div class="main-buttom">3d manufacturing</div></a></li>
+                    <li><a href="../photos.html"><div class="main-buttom">Photos</div></a></li>
+                    <li><a href="../profile.html"><div class="main-buttom">Profile</div></a></li>
+                    <li><a href="https://github.com/i-r-i-i-r" target="_blank"><div class="main-buttom">GitHub</div></a></li>
+                    <li><a href="https://www.youtube.com/@iritani_drums" onclick="window.open(this.href,'_system');return false;"><div class="main-buttom">Drums</div></a></li>
                 </ul>
             </nav>
             <br><br><br><br>
@@ -95,11 +95,11 @@ $(function(){
         
         <!-- 共通: ハンバーガーメニュー -->
         <div id="hamburger-menu"></div>
-        <script>$(function(){$('#hamburger-menu').load('./common/hamburger-menu.html');});</script>
+        <script>$(function(){$('#hamburger-menu').load('../common/hamburger-menu.html');});</script>
         
         <!-- 共通: フッタ -->
         <div id="footer"></div>
-        <script>$(function(){$('#footer').load('./common/footer.html');});</script>
+        <script>$(function(){$('#footer').load('../common/footer.html');});</script>
     </div>
     
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
