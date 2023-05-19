@@ -5,9 +5,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
 
+/* 全体 */
 * {
     box-sizing: border-box;
 }
+
 body {
     margin: 0;
     padding: 0;
@@ -17,12 +19,35 @@ body {
 	letter-spacing: 0.03em;
 }
 
-.main{
-    position: relative;
-    padding-top: 80px;
-    z-index: 1;
+a{
+    text-decoration: none;
+    color: #000000;
 }
 
+h1 {
+    margin: 0; 
+    padding: 0;
+    font-size: 20px;
+}
+
+nav {
+    margin: 0 0 0 auto;
+}
+
+.page-list li {
+	text-decoration: none;
+    margin: 0 0 0 0;
+    font-size: 16px;
+    text-align: center;
+    display:table;
+    margin: 0 auto;
+	color: #333;
+	letter-spacing: 0.06em;
+	font-weight: bold;
+}
+
+
+/* header */
 header {
     position: fixed;
     padding: 0;
@@ -36,77 +61,49 @@ header {
     /*background: linear-gradient(90deg, rgba(0, 0, 0, 1) 100%, rgba(0,0,0,1) 100%);*/
 }
 
-h1 {
-    margin: 0; 
-    padding: 0;
-    font-size: 20px;
-}
-a {	
-    position: relative;
-    text-decoration: none;
-    color: #4b4b4b;
-    z-index: 1000;
-    overflow:hidden;
-}
-nav {
-    margin: 0 0 0 auto;
-}
-li {
-	text-decoration: none;
-    margin: 0 0 0 0;
-    font-size: 16px;
-    text-align: center;
-    display:table;
-    margin: 0 auto;
-	color: #333;
-	letter-spacing: 0.05em;
-	font-weight: bold;
-}
-
-
-.header-logo img{
+header #logo-button{
     margin: 12px 10pt 12px;/*上、左右、下*/
     width: auto;
     max-height:36px;
     display: block;
 }
 
-.ul-header {
+header ul {
     list-style: none;
     margin: 0 0 0 auto;
     display: flex;
 }
-.ul-center {
-    list-style: none;
-    margin: 0 0 0 -40px;
-    text-align: center;
-}
-.header-buttom1 {
+
+header .link {
     height: 60px;
-    width:180px;
     display:table-cell;
     vertical-align:middle;
 	color: black;
 }
-.header-buttom2 {
-    height: 60px;
-    width:80px;
-    display:table-cell;
-    vertical-align:middle;
-	color: black;
-}
-.header-buttom1:hover{
-	background-color: rgba(0, 0, 0, 1);
-	color: #fff;
-	transition:0.35s
-}
-.header-buttom2:hover{
+header .link:hover{
 	background-color: rgba(0, 0, 0, 1);
 	color: #fff;
 	transition:0.35s
 }
 
-.main-buttom {
+
+/* wrapper */
+#wrapper{
+    height: 70%;
+    min-height: 100vh;
+    position: relative;/*←相対位置*/
+    padding-bottom: 50px;/*←footerの高さ*/
+    box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
+    z-index: 2;
+}
+
+#wrapper .page-list ul{
+    list-style: none;
+    margin: 0 0 0 -40px;
+    text-align: center;
+}
+
+#wrapper .page-list .link {
     height: 40px;
     width:200px;
     display:table-cell;
@@ -114,36 +111,54 @@ li {
     margin: 0 auto;
     text-align: center;
 }
-.main-buttom:hover{
-	background-color: rgba(0, 0, 0, 1);
-	color: #fff;
-	transition:0.35s
-}
-.url-cltr {
-    height: inherit;
-    width:inherit;
-	background-color: rgba(0, 0, 0, 0.1);
-	color: #333;
-}
-.url-cltr:hover{
+
+#wrapper .page-list .link:hover{
 	background-color: rgba(0, 0, 0, 1);
 	color: #fff;
 	transition:0.35s
 }
 
 
-.wrapper{
-    height: 100%;
-    min-height: 100vh;
-    position: relative;/*←相対位置*/
-    padding-bottom: 30px;/*←footerの高さ*/
-    box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
-    z-index: 2;
+/* main */
+#main{
+    position: relative;
+    padding-top: 80px;
+    z-index: 1;
 }
 
+#main .text{
+    padding:0 10px;
+}
+
+#main .text a{
+    color: #000000;
+	background-color: rgba(195, 195, 195, 1);
+    z-index: 1000;
+    overflow:hidden;
+}
+
+#main .text a:hover{
+	background-color: rgba(0, 0, 0, 1);
+	color: #fff;
+	transition:0.35s
+}
+
+#main .photo-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+#main .photo-list a{
+    display: block;
+}
+
+/* footer */
 footer{
     width: 100%;
-    background-color: rgba(0, 0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 100%);
     color:rgba(0, 0, 0, 1);
     text-align: right;
     padding: 10px 20px;
@@ -151,14 +166,18 @@ footer{
     bottom: 0; /*下に固定*/
 }
 
-.for-pc { display:block; }
-.for-sp { display:none; }
+
+
+header   .page-list { display:block;}
+#wrapper .page-list { display:none; }
+.for-phone  { display:none; }
 .hm-trigger { display:none; }
 
 @media only screen and (max-width : 767px){
-    .for-pc { display:none; }
-    .for-sp { display:block; }
-    .hm-trigger { display:block; }
+    header   .page-list { display:none; }
+    #wrapper .page-list { display:block;}
+    .for-phone  { display:block;}
+    .hm-trigger { display:block;}
 }
 
 
@@ -168,7 +187,6 @@ footer{
 
 
 /*========= ハンバーガーメニューのためのCSS ===============*/
-
 #hm-nav{
     /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
     position:fixed;
@@ -178,7 +196,7 @@ footer{
     right: -120%;
 	width:100%;
     height: 100vh;/*ナビの高さ*/
-	background:#999;
+	background:rgba(153, 153, 153, 0.85);
     /*動き*/
 	transition: all 0.6s;
 }
@@ -191,7 +209,8 @@ footer{
 /*ハンバーガーメニューの縦スクロール*/
 #hm-nav.panelactive #hm-wrapper{
     /*ナビの数が増えた場合縦スクロール*/
-    position: fixed;
+    position: relative;
+    right: -20px;
     z-index: 999; 
     width: 100%;
     height: 100vh;/*表示する高さ*/
@@ -212,16 +231,6 @@ footer{
 
 /*リストのレイアウト設定*/
 
-#hm-nav li{
-	text-decoration: none;
-	list-style: none;
-    text-align: center;
-	padding:4px;
-	display: block;
-	color: #333;
-	letter-spacing: 0.05em;
-	font-weight: bold;
-}
 
 
 /*========= トリガのためのCSS ===============*/
@@ -279,9 +288,3 @@ footer{
 
 
 
-
-.profile-text{
-    
-    padding:0 10px;
-    
-}
