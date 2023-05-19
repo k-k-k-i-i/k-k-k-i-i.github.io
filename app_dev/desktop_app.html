@@ -5,54 +5,65 @@
     <meta charset="utf-8">
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../common/style.css" type="text/css">
+    <link rel="stylesheet" href="../common/style.css">
     <link rel="icon" href="../common/icon/icon.png">
     
     <!-- 共通: フォントの設定-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" crossorigin="anonymous">
     
     <!-- 共通: lightbox (ウェブサイト上で画像や動画を拡大表示するためのポップアップウィンドウ) の設定-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" crossorigin="anonymous"></script>
     
     <title>i-r-i-i-r / Train Diagram App</title>
   </head>
   <body>
     <!-- 共通: ヘッダ -->
-    <div id="header"></div>
-    <script>$(function(){$('#header').load('../common/header.html');});</script>
+    <header></header>
+    <script>$(function(){$('header').load('../common/header.html');});</script>
     
-    <div class="wrapper">
-        <div class="main">
-            <div class="profile-text">
+    <div id="wrapper">
+        <div id="main">
+            <!-- コンテンツ -->
+            <div class="text">
                 <p><b>制作の動機</b><br>
                     アプリを作ってみたいと思い、まずは身近で単純な題材を取り上げてみました。
                 </p>
                 <p><b>発車時刻を調べる</b><br>
                     予め登録した駅の発車時刻のみを対象として、アクション数を最小限に抑えたアプリを作りました。<br>
-                ソースコードは<a class="url-cltr" href="https://github.com/i-r-i-i-r/train-departure-time-app" target="_blank">こちら</a>。
+                ソースコードは<a href="https://github.com/i-r-i-i-r/train-departure-time-app" target="_blank">こちら</a>。
                 </p>
+            </div>
+            <div class="photo-list">
                 <iframe width="320" height="180" src="https://www.youtube.com/embed/YfoaGhA_eyc" title="YouTube video player" 
                     frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <br>
+            </div>
+            
+            <div class="text">
                 <p><b>経路のダイヤ検索</b><br>
                     こちらも普段通る経路のみに絞り、アクション数を最小限にしたアプリです。<br>
                     個人的には乗換駅で店に寄って乗車時刻がずれることがよくあるので、<br>
                     少し後の列車も同時に表示される仕様にしました。<br>
-                    ソースコードは<a class="url-cltr" href="https://github.com/i-r-i-i-r/train-schedule-app" target="_blank">こちら</a>。
+                    ソースコードは<a href="https://github.com/i-r-i-i-r/train-schedule-app" target="_blank">こちら</a>。
                 </p>
+            </div>
+            <div class="photo-list">
                 <iframe width="320" height="180" src="https://www.youtube.com/embed/kzmqMRMkKrk" title="YouTube video player" 
                     frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <br>
+            </div>
+            
+            <div class="text">
                 <p><b>利用したAPI</b><br>
-                    今回のアプリでは<a class="url-cltr" href="https://ekiworld.net/service/sier/webservice/index.html" target="_blank">駅すぱあと</a>が提供するAPI(無料版)を利用しました。<br>
-                    ソースコードをご利用の場合は<a class="url-cltr" href="https://ekiworld.net/free_provision/index.php" target="_blank">API Keyを別途取得</a>し、該当箇所を書き換えてください。<br>
+                    今回のアプリでは<a href="https://ekiworld.net/service/sier/webservice/index.html" target="_blank">駅すぱあと</a>
+                    が提供するAPI(無料版)を利用しました。<br>
+                    ソースコードをご利用の場合は<a href="https://ekiworld.net/free_provision/index.php" target="_blank">API Keyを別途取得</a>し、
+                    該当箇所を書き換えてください。<br>
                 </p>
                 <p><b>プログラムをexe化</b><br>
-                    今回のプログラムは<a class="url-cltr" href="https://nuitka.net/" target="_blank">Nuitka</a>でexe化して利用しています。<br>
+                    今回のプログラムは<a href="https://nuitka.net/" target="_blank">Nuitka</a>でexe化して利用しています。<br>
                     tkinterを使ったプログラムにNuitkaを適用するのが若干手間だったので、追々手順をまとめようと思います。<br>
                 </p>
             </div>
@@ -63,10 +74,12 @@
         <script>$(function(){$('#hamburger-menu').load('../common/hamburger-menu.html');});</script>
         
         <!-- 共通: フッタ -->
-        <div id="footer"></div>
-        <script>$(function(){$('#footer').load('../common/footer.html');});</script>
+        <footer></footer>
+        <script>$(function(){$('footer').load('../common/footer.html');});</script>
     </div>
     
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="></script>
   </body>
 </html>
+
