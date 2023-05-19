@@ -5,39 +5,41 @@
     <meta charset="utf-8">
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../common/style.css" type="text/css">
+    <link rel="stylesheet" href="../common/style.css">
     <link rel="icon" href="../common/icon/icon.png">
     
     <!-- 共通: フォントの設定-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" crossorigin="anonymous">
     
     <!-- 共通: lightbox (ウェブサイト上で画像や動画を拡大表示するためのポップアップウィンドウ) の設定-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" crossorigin="anonymous"></script>
     
     <title>i-r-i-i-r / App development</title>
   </head>
   <body>
     <!-- 共通: ヘッダ -->
-    <div id="header"></div>
-    <script>$(function(){$('#header').load('../common/header.html');});</script>
+    <header></header>
+    <script>$(function(){$('header').load('../common/header.html');});</script>
     
-    <div class="wrapper">
-        <div class="main">
-            <div class="profile-text">
+    <div id="wrapper">
+        <div id="main">
+            <!-- コンテンツ -->
+            <div class="text">
                 <p>
                     モノづくりの幅を広げたいと思い、アプリの制作を始めました。
                 </p><br>
                     <p><b>データ解析Webアプリ</b><br>
-                    2022年5月に公開された<a class="url-cltr" href="https://pyscript.net" target="_blank">PyScript</a>を使い、簡単なWebアプリを2つ作りました。<br>
-                    詳細は<a class="url-cltr" href="./app_dev/data_analysis.html">こちら</a>。
+                    2022年5月に公開された<a href="https://pyscript.net" target="_blank">PyScript</a>を使い、
+                    簡単なWebアプリを2つ作りました。<br>
+                    詳細は<a href="./app_dev/data_analysis.html">こちら</a>。
                 </p><br>
                 <p><b>列車ダイヤ検索アプリ</b><br>
                     最小限のアクション数で普段使いの駅のダイヤを調べられるデスクトップアプリを作りました。<br>
-                    詳細は<a class="url-cltr" href="./app_dev/desktop_app.html">こちら</a>。
+                    詳細は<a href="./app_dev/desktop_app.html">こちら</a>。
                 </p>
             </div>
         </div>
@@ -47,10 +49,14 @@
         <script>$(function(){$('#hamburger-menu').load('../common/hamburger-menu.html');});</script>
         
         <!-- 共通: フッタ -->
-        <div id="footer"></div>
-        <script>$(function(){$('#footer').load('../common/footer.html');});</script>
+        <footer></footer>
+        <script>$(function(){$('footer').load('../common/footer.html');});</script>
     </div>
     
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="></script>
   </body>
 </html>
+
+
+

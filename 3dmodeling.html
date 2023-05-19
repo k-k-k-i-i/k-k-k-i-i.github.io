@@ -5,36 +5,39 @@
     <meta charset="utf-8">
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../common/style.css" type="text/css">
+    <link rel="stylesheet" href="../common/style.css">
     <link rel="icon" href="../common/icon/icon.png">
     
     <!-- 共通: フォントの設定-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" crossorigin="anonymous">
     
     <!-- 共通: lightbox (ウェブサイト上で画像や動画を拡大表示するためのポップアップウィンドウ) の設定-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" crossorigin="anonymous"></script>
     
     <title>i-r-i-i-r / 3d manufacturing</title>
   </head>
   <body>
     <!-- 共通: ヘッダ -->
-    <div id="header"></div>
-    <script>$(function(){$('#header').load('../common/header.html');});</script>
+    <header></header>
+    <script>$(function(){$('header').load('../common/header.html');});</script>
     
-    <div class="wrapper">
-        <div class="main">
-            <div class="profile-text">
+    <div id="wrapper">
+        <div id="main">
+            <!-- コンテンツ -->
+            <div class="text">
                 <p>
                     造形自由度の高さに惹かれ、3D造形を始めました。
                 </p><br>
                 <p><b>今までに作ったもの</b><br>
                         設計と造形の練習を兼ねて、生活治具を中心に造形してきました (写真はクリックで拡大できます)。<br>
-                        形状ファイルは<a class="url-cltr" href="https://github.com/i-r-i-i-r/shape-data" target="_blank">こちら</a>
+                        形状ファイルは<a href="https://github.com/i-r-i-i-r/shape-data" target="_blank">こちら</a>
                 </p>
+            </div>
+            <div class="photo-list">
                 <a href="./pictures/3d_manufacturing/washroom_1.JPG"  data-lightbox="group" data-title="格子に着けられる小さいフックです。洗面所の小物掛けに使っています">
                     <img src="./pictures/3d_manufacturing/thumbnail/washroom_1.JPG" height="150">  
                 </a>
@@ -80,12 +83,16 @@
                 <a href="./pictures/3d_manufacturing/cloud.JPG"  data-lightbox="group" data-title="複雑な形状でも造形可能です" alt="">
                     <img src="./pictures/3d_manufacturing/thumbnail/cloud.JPG" height="150">
                 </a>
-                <br>
+            </div>
+            
+            <div class="text">
                 <p><b>画像からの2D点群データの生成</b><br>
                     SNSで「石川県」を造形している投稿を拝見して「形状作成を自動化できないか」と思い、<br>
                     画像からDS Mechanical用の2D点群データを生成するプログラムを作成しました。<br>
-                    ソースコードは<a class="url-cltr" href="https://github.com/i-r-i-i-r/image-to-point-cloud" target="_blank">こちら</a>。
+                    ソースコードは<a href="https://github.com/i-r-i-i-r/image-to-point-cloud" target="_blank">こちら</a>。
                 </p>
+            </div>
+            <div class="photo-list">
                 <a href="./pictures/ishikawa/step0.png"  data-lightbox="group" data-title="プログラムの入力画像例です">
                     <img src="./pictures/ishikawa/thumbnail/step0.png" height="150">
                 </a>
@@ -95,16 +102,24 @@
                 <a href="./pictures/ishikawa/step7.png"  data-lightbox="group" data-title="点群データをCADで加工することで立体形状を作成できます">
                     <img src="./pictures/ishikawa/thumbnail/step7.png" height="150">
                 </a>
-                <br>
+            </div>
+            
+            <div class="text">
                 <p><b>歯車・摩擦車の設計</b><br>
-                    <a class="url-cltr" href="https://www.youtube.com/c/SCRAFTchannel?app=desktop" target="_blank">S.CRAFTさん</a>の動画を拝見して「歯車の自動設計を無料CADソフトでできないか」と思い、
+                    <a href="https://www.youtube.com/c/SCRAFTchannel?app=desktop" target="_blank">S.CRAFTさん</a>の動画を拝見して
+                    「歯車の自動設計を無料CADソフトでできないか」と思い、
                     いくつかプログラムを作成しています。<br>
-                    ソースコードは<a class="url-cltr" href="https://github.com/i-r-i-i-r?tab=repositories&q=gear" target="_blank">こちら</a>。
+                    ソースコードは<a href="https://github.com/i-r-i-i-r?tab=repositories&q=gear" target="_blank">こちら</a>。
                 </p>
-                <iframe width="320" height="180" src="https://www.youtube.com/embed/530uTYpyHhM" title="YouTube video player" 
-                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <iframe width="320" height="180" src="https://www.youtube.com/embed/SIugO3OQRek" title="YouTube video player" 
-                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="photo-list">
+                <a><iframe width="320" height="180" src="https://www.youtube.com/embed/530uTYpyHhM" title="YouTube video player" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </a>
+                <a><iframe width="320" height="180" src="https://www.youtube.com/embed/SIugO3OQRek" title="YouTube video player" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
                 </a>
             </div>
         </div>
@@ -114,10 +129,11 @@
         <script>$(function(){$('#hamburger-menu').load('../common/hamburger-menu.html');});</script>
         
         <!-- 共通: フッタ -->
-        <div id="footer"></div>
-        <script>$(function(){$('#footer').load('../common/footer.html');});</script>
+        <footer></footer>
+        <script>$(function(){$('footer').load('../common/footer.html');});</script>
     </div>
     
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="></script>
   </body>
 </html>

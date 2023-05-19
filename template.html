@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- 共通: 基本設定-->
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../common/style.css">
+    <link rel="icon" href="../common/icon/icon.png">
+    
+    <!-- 共通: フォントの設定-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" crossorigin="anonymous">
+    
+    <!-- 共通: lightbox (ウェブサイト上で画像や動画を拡大表示するためのポップアップウィンドウ) の設定-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" crossorigin="anonymous"></script>
+    
+    <title>i-r-i-i-r / Template</title>
+  </head>
+  <body>
+    <!-- 共通: ヘッダ -->
+    <header></header>
+    <script>$(function(){$('header').load('../common/header.html');});</script>
+    
+    <div id="wrapper">
+        <div id="main">
+            <!-- コンテンツ -->
+            <!-- 以下、記載例 -->
+            <div class="text">
+                <p>This is a 
+                    <a href="https://ja.wikipedia.org/wiki/%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88" target="_blank">template</a>.
+                </p>
+            </div>
+            
+            <div class="photo-list">
+                <a><iframe width="320" height="180" src="https://www.youtube.com/embed/530uTYpyHhM" title="YouTube video player" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </a>
+                <a><iframe width="320" height="180" src="https://www.youtube.com/embed/SIugO3OQRek" title="YouTube video player" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </a>
+            </div>
+            
+            <div class="photo-list">
+                <a href="./pictures/gallery/001.JPG"  data-lightbox="group" data-title="text1" alt="">
+                        <img src="./pictures/gallery/001.JPG" height="150">
+                </a>
+                <a href="./pictures/gallery/002.JPG"  data-lightbox="group" data-title="text2" alt="">
+                        <img src="./pictures/gallery/002.JPG" height="150">
+                </a>
+                <a href="./pictures/gallery/003.JPG"  data-lightbox="group" data-title="text3" alt="">
+                        <img src="./pictures/gallery/003.JPG" height="150">
+                </a>
+                <a href="./pictures/gallery/004.JPG"  data-lightbox="group" data-title="text4" alt="">
+                        <img src="./pictures/gallery/004.JPG" height="150">
+                </a>
+                <a href="./pictures/gallery/001.JPG"  data-lightbox="group" data-title="text1" alt="">
+                        <img src="./pictures/gallery/001.JPG" height="150">
+                </a>
+                <a href="./pictures/gallery/002.JPG"  data-lightbox="group" data-title="text2" alt="">
+                        <img src="./pictures/gallery/002.JPG" height="150">
+                </a>
+                <a href="./pictures/gallery/003.JPG"  data-lightbox="group" data-title="text3" alt="">
+                        <img src="./pictures/gallery/003.JPG" height="150">
+                </a>
+                <a href="./pictures/gallery/004.JPG"  data-lightbox="group" data-title="text4" alt="">
+                        <img src="./pictures/gallery/004.JPG" height="150">
+                </a>
+            </div>
+            <!-- 記載例ここまで -->
+            
+        </div>
+        
+        <!-- 共通: ハンバーガーメニュー -->
+        <div id="hamburger-menu"></div>
+        <script>$(function(){$('#hamburger-menu').load('../common/hamburger-menu.html');});</script>
+        
+        <!-- 共通: フッタ -->
+        <footer></footer>
+        <script>$(function(){$('footer').load('../common/footer.html');});</script>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="></script>
+  </body>
+</html>
